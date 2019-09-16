@@ -1,7 +1,7 @@
-//We're going to create the JS for a basic quiz application. 
+//We're going to create the JS for a basic quiz application.
 
 //Let's think about the nature of this quiz app first. We're going to be creating lots of user objects, and we're
-//also going to be creating lots of Question objects. Those would make two perfectly good constructors. 
+//also going to be creating lots of Question objects. Those would make two perfectly good constructors.
 
 //Create a QuizUser constructor that accepts name, email, password, and totalScore parameters and set them appropriatly
 
@@ -45,4 +45,30 @@ console.log('My users Array and my questions arrray are ...');
 //Now loop console.log your users array and your questions array and verify that they're both holding the right data.
 
   //code here
+
+
+function QuizUser (name, email, password, totalScore) {
+  this.name = name
+  this.email = email
+  this.password = password
+  this.totalScore = totalScore
+}
+
+function Question (title, answersArray, rightAnswer, difficulty) {
+  this.title = title;
+  this.answersArray = answersArray;
+  this.rightAnswer = rightAnswer;
+  this.difficulty = difficulty;
+}
+
+let quizUsers = []
+quizUsers[0] = new QuizUser('tina', 'tina@gmail.com', 'tina123', 0)
+quizUsers[1] = new QuizUser('a', 'a', 'a', 0)
+quizUsers[2] = new QuizUser('b', 'b', 'b', 0)
+
+
+let questions = []
+questions[0] = new Question('question1', [true], 'true', 'easy')
+questions[1] = new Question('', [], '', '')
+questions[2] = new Question('', [], '', '')
 
